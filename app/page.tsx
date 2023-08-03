@@ -8,7 +8,7 @@ export default function Home() {
             <h1 className="text-9xl font-bold mb-10 text-zinc-700 drop-shadow-xl shadow-black">
               Nutri<span className="font-extralight">Sage</span>
             </h1>
-            <p className="font-medium text-[20px] text-zinc-700 drop-shadow-2xl shadow-black">
+            <p className="font-light text-3xl text-zinc-700 drop-shadow-2xl shadow-black">
               Conéctate con tu Bienestar a través de la Nutrición y el
               Ejercicio.
             </p>
