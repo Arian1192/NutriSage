@@ -2,11 +2,11 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   theme: {
     container: {
       center: true,
@@ -16,6 +16,13 @@ module.exports = {
       },
     },
     extend: {
+      backgroundImage: {
+        "radial-gradient": "radial-gradient(var(--tw-gradient-stops))",
+        "square-gradient":
+          " linear-gradient(rgb(0, 0, 0) 1px, transparent 1px)",
+        "radial-gradient-polka":
+          "radial-gradient(circle, transparent, 200px, rgba(255, 255, 255, 0.995) 400px )",
+      },
       keyframes: {
         "accordion-down": {
           from: { height: 0 },
@@ -32,5 +39,8 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
-}
+  plugins: [
+    require("tailwindcss-animate"),
+    require("tailwindcss-dotted-background"),
+  ],
+};
