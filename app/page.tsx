@@ -1,14 +1,14 @@
 export default function Home() {
   return (
     <div>
-      <div className="w-full h-screen flex flex-col justify-center items-center relative ">
-        <div className="w-[1200px] border h-[800px] bg-dotted-spacing-6 bg-dotted-black bg-dotted-radius-0.5 blur-xs -z-50" />
+      <div className="w-full h-screen flex flex-col justify-center items-center relative overflow-hidden">
+        <div className="w-[1200px] border h-[800px] bg-dotted-spacing-6 bg-dotted-black bg-dotted-radius-0.5 blur-xs -z-50 " />
         <div className="absolute top-0 left-0 w-full h-screen bg-radial-gradient-polka ">
           <div className="w-full h-screen justify-center items-center text-4xl font-bold text-center mt-80 z-1">
-            <h1 className="text-9xl font-bold mb-10 text-zinc-700 drop-shadow-xl shadow-black">
+            <h1 className="text-9xl font-bold mb-10 text-zinc-700 drop-shadow-xl shadow-black max-sm:text-7xl">
               Nutri<span className="font-extralight">Sage</span>
             </h1>
-            <p className="font-light text-3xl text-zinc-700 drop-shadow-2xl shadow-black">
+            <p className="font-light text-3xl text-zinc-700 drop-shadow-2xl shadow-black max-sm:text-2xl">
               Conéctate con tu Bienestar a través de la Nutrición y el
               Ejercicio.
             </p>
