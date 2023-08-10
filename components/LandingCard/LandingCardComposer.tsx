@@ -10,6 +10,7 @@ type ILandingCardProps = {
   header: string;
   text: string;
   description: string;
+  path: string;
 };
 
 const LandingCardComposer = ({
@@ -18,6 +19,7 @@ const LandingCardComposer = ({
   header,
   text,
   description,
+  path
 }: ILandingCardProps) => {
   return (
     <LandingCardComponent>
@@ -25,7 +27,7 @@ const LandingCardComposer = ({
       <LandingCardComponent.Header header={header} />
       <LandingCardComponent.Description description={description} />
       <LandingCardComponent.Text text={text} />
-      <LandingCardComponent.Button buttonTitle="More Info" />
+      <LandingCardComponent.Button buttonTitle="More Info" path={path} />
     </LandingCardComponent>
   );
 };

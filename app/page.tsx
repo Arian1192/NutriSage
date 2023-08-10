@@ -8,7 +8,7 @@ const textForCards = [
     description: "Diesta Semanal Personalizada",
     imgSrc: imagenFrutas,
     textContentDescription:
-      "Nuestra red neuronal, nos indicará tu IMC, porcentaje de musculo y grasa, y porcentaje de agua, que usaremos junto a la inteligencia artificial para generarte una dieta en base a tus necesidades y objeticos",
+      "Nuestra red neuronal, nos indicará tu IMC, porcentaje de musculo y grasa, y porcentaje de agua, que usaremos junto a la inteligencia artificial para generarte una dieta en base a tus necesidades y objetivos",
   },
   {
     title: "Ejercicio",
@@ -61,6 +61,7 @@ export default function Home() {
               header={textForCards[0].title}
               description={textForCards[0].description}
               text={textForCards[0].textContentDescription}
+              path="nutricion"
             />
             <LandingCardComposer
               image={textForCards[1].imgSrc}
@@ -68,6 +69,7 @@ export default function Home() {
               header={textForCards[1].title}
               description={textForCards[1].description}
               text={textForCards[1].textContentDescription}
+              path="ejercicio"
             />
           </div>
         </div>
