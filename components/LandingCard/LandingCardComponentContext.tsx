@@ -5,6 +5,7 @@ import { LandingTextCardComponent } from "./LandingTextCardComponent";
 import LandingDescriptionCardComponent from "./LandingDescriptionCardComponent";
 import { LandingButtonActionComponent } from "./LandingButtonActionComponent";
 import { useRouter } from "next/navigation";
+
 export const LandingCardComponentContext =
   createContext<ILandingCardComponentContext>({});
 
