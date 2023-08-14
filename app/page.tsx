@@ -107,7 +107,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-full h-screen p-5 flex flex-col justify-center items-center gap-5">
+      <section className="w-full h-auto p-5 flex flex-col flex-grow mb-24 justify-center items-center gap-5">
   <h2 className="text-4xl mt-24 font-bold text-zinc-700 lg:text-5xl mb-10 max-sm:mt-24 text-center">
     Algunas de las preguntas más frecuentes
   </h2>
