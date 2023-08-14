@@ -1,8 +1,9 @@
 import imagenFrutas from "../public/primer-plano-mujer-atletica-agregando-fresas-mientras-hace-ensalada-frutas-cocina.jpg";
 import imagenGim from "../public/fitness-gb93cde767_1280.jpg";
 import LandingCardComposer from "@/components/LandingCard/LandingCardComposer";
-import Svguuundulate from "@/components/Svgs/Svguuundulate";
 import { AccordionComposer } from "@/components/Acordion/AccordionComposer";
+import NavbarComponent from "@/components/Navbar/NavbarComponent";
+import { FooterComponent } from "@/components/Footer/FooterComponent";
 
 const textForCards = [
   {
@@ -55,6 +56,7 @@ const QandA = [
 export default function Home() {
   return (
     <div>
+      <NavbarComponent />
       <div className="w-full h-screen flex flex-col justify-center items-center relative overflow-hidden">
         <div className="w-[1200px] border h-[800px] bg-dotted-spacing-6 bg-dotted-black bg-dotted-radius-0.5 blur-xs -z-50 " />
         <div className="absolute top-0 left-0 w-full h-screen bg-radial-gradient-polka ">
@@ -71,6 +73,7 @@ export default function Home() {
         <div className="absolute w-[800px] h-[400px] blur-2xl opacity-90 -z-10 rounded-xl bg-gradient-to-b from-green-500 to-white">
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
         </div>
+        N
       </div>
       <section className="w-full h-auto">
         <div className="-z-10 transform: skew-y-[6deg] origin-top-right bg-green-300  w-full flex-col h-4/5 flex justify-center items-center">
@@ -108,23 +111,23 @@ export default function Home() {
         </div>
       </section>
       <section className="w-full h-auto p-5 flex flex-col flex-grow mb-24 justify-center items-center gap-5">
-  <h2 className="text-4xl mt-24 font-bold text-zinc-700 lg:text-5xl mb-10 max-sm:mt-24 text-center">
-    Algunas de las preguntas más frecuentes
-  </h2>
+        <h2 className="text-4xl mt-24 font-bold text-zinc-700 lg:text-5xl mb-10 max-sm:mt-24 text-center">
+          Algunas de las preguntas más frecuentes
+        </h2>
 
-  <div className="w-1/2 max-sm:w-full max-md:w-2/3 flex-grow justify-center items-center h-auto">
-    {QandA.map((question, i) => {
-      return (
-        <AccordionComposer
-          key={i}
-          header={question.header}
-          description={question.description}
-        />
-      );
-    })}
-  </div>
-</section>
-
+        <div className="w-1/2 max-sm:w-full max-md:w-2/3 flex-grow justify-center items-center h-auto">
+          {QandA.map((question, i) => {
+            return (
+              <AccordionComposer
+                key={i}
+                header={question.header}
+                description={question.description}
+              />
+            );
+          })}
+        </div>
+      </section>
+      <FooterComponent />
     </div>
   );
 }
