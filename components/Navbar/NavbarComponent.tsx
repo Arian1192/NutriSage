@@ -1,5 +1,5 @@
 "use client";
-
+import { useRouter } from "next/navigation";
 import * as React from "react";
 import Link from "next/link";
 import {
@@ -26,6 +26,9 @@ import {
 import { MenuIconComponent } from "../MenuIcon/MenuIconComponent";
 const NavbarComponent = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  const router = useRouter()
+
+
 
   return (
     <>

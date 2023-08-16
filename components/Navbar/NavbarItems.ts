@@ -31,13 +31,13 @@ export const WhoWheAre = [
 export const ListLoginItems = [
   {
     id: 1,
-    path: "login",
+    path: "auth/login",
     title: "Iniciar Sesión",
     description: "Inicia sesión en tu cuenta",
   },
   {
     id: 2,
-    path: "register",
+    path: "auth/register",
     title: "Registrarse",
     description: "Crea una cuenta y ponte en forma",
   },
