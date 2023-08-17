@@ -46,21 +46,25 @@ const data = [
   },
 ];
 
+
+
+
+
 export const SimpleBarCharts = () => {
   return (
-   
-      <ResponsiveContainer width="100%" aspect={2}>
-        <BarChart
-          data={data}
-          margin={{top:20, right: 10, left: -20}}
-        >
-          <CartesianGrid strokeDasharray="4 1 " />
-          <XAxis dataKey="day" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-          <Bar dataKey="weight" fill="#2dd4bf" />
-        </BarChart>
-      </ResponsiveContainer>
+    <ResponsiveContainer width="100%" aspect={2}>
+      <BarChart data={data} margin={{ top: 20, right: 10, left: -20 }}>
+        {/* <CartesianGrid strokeDasharray="4 1 " /> */}
+        <XAxis dataKey="day" />
+        <YAxis />
+        <Tooltip />
+        <Legend />
+        <Bar
+          dataKey="weight"
+          fill="#2dd4bf"
+          barSize={40}
+        />
+      </BarChart>
+    </ResponsiveContainer>
   );
 };

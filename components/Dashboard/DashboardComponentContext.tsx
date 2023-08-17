@@ -5,6 +5,7 @@ import { DashboardComponentBigCalendar } from "./DashboardComponentBigCalendar";
 import { DashboardComponentCardWidget } from "./DashboardComponentCardWidget";
 import { SimpleBarCharts } from "../Charts/SimpleBarCharts";
 import { StackedAreaChart } from "../Charts/StackedAreaChart";
+import { DashboardComponentCurrentDiet } from "./DashboardComponentCurrentDiet";
 
 export const DashboardContext = createContext(null);
 
@@ -30,3 +31,4 @@ DashboardComponent.Calendar = DashboardComponentBigCalendar;
 DashboardComponent.CardWidget = DashboardComponentCardWidget;
 DashboardComponent.BarChart = SimpleBarCharts;
 DashboardComponent.StackerAreaChart = StackedAreaChart;
+DashboardComponent.CurrentDiet = DashboardComponentCurrentDiet;
