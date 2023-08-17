@@ -1,15 +1,18 @@
 "use client";
 import React from "react";
 import { DashboardComponent } from "./DashboardComponentContext";
-import { ListHealthyItems } from "../Navbar/NavbarItems";
-import { LoginComponent } from "../Login/LoginComponent";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { SimpleBarCharts } from "../Charts/SimpleBarCharts";
-import { StackedAreaChart } from "../Charts/StackedAreaChart";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@radix-ui/react-tabs";
+
 import { DashboardComponentCurrentDiet } from "./DashboardComponentCurrentDiet";
+import { useUser } from "@/context/userContext";
+import { Radar } from "lucide-react";
 
 export const DashboardComponentContainer = () => {
+  
+  const user = useUser();
+
+  const userData = user?.userData?.data.user?.user_metadata;
+  console.log(userData);
   return (
     <div className="flex h-screen">
       <aside className="max-lg:hidden lg:w-1/12 bg-emerald-300 text-center text-white">
@@ -23,21 +26,26 @@ export const DashboardComponentContainer = () => {
           <h1 className="text-xl font-semibold mb-4">Resumen General</h1>
           <div className="h-auto overflow-y-auto w-[100%] p-2 md:p-4">
             <div className="w-[100%] border rounded border-emerald-300 flex flex-col justify-start items-center">
-              <p className="text-2xl m-5">Arian Collaso</p>
+              <p className="text-2xl m-5">
+                {`${userData?.full_name}`.toLocaleUpperCase()}
+              </p>
               <Avatar>
-                <AvatarImage
-                  src="https://github.com/shadcn.png"
-                  className="h-32 w-32"
-                />
+                <AvatarImage src={userData?.picture} className="h-32 w-32" />
                 <AvatarFallback>AR</AvatarFallback>
               </Avatar>
               <DashboardComponent.CardWidget />
               <p className="text-left md:text-3xl font-bold mb-5">
                 Resumen de tus objetivos
               </p>
+              {/* Pasar todo lo de dentro a un componente o varios !!!!!!!!! */}
               <div className="w-[90%] border rounded border-emerald-300 flex flex-col justify-start items-start p-4 mb-5">
                 <div className="flex gap-2 mb-2">
-                  <p>Objetivo:</p>
+                  <p className="flex gap-2">
+                    <span>
+                      <Radar />
+                    </span>
+                    Objetivo:
+                  </p>
                   <p>Perdida de peso</p>
                 </div>
                 <div>

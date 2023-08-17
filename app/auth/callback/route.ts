@@ -10,7 +10,6 @@ export async function GET(request: NextRequest) {
 
   if (code) {
     const supabase = createRouteHandlerClient({ cookies });
-    //usando el codigo que le hemos pasdo por url nos devuelve la sessión del usuario.
     await supabase.auth.exchangeCodeForSession(code);
 
   }

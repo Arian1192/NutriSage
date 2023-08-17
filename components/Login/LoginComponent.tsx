@@ -25,7 +25,7 @@ export const LoginComponent = () => {
 
   const handleSingOut = async () => {
     await supabase.auth.signOut();
-    router.push('auth/register')
+    router.push('/register')
   };
 
   useEffect(() => {
