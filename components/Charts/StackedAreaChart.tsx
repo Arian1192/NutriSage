@@ -40,7 +40,7 @@ export const StackedAreaChart = () => {
         width={320}
         height={200}
         data={data}
-        margin={{ top: 30, right: 30, bottom: 10, left: 5 }}
+        margin={{top:20, right: 10, left: -20}}
       >
         <CartesianGrid strokeDasharray="3 3"/>
         <XAxis dataKey="day"/>
